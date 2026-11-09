@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../assets/images/trello-favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <main class="sign-up-main">
+      <img src="../assets/images/logo.png" alt="Logo" class="logo" />
+      <p class="sign-up-message">Please sign up</p>
+      <!-- form -->
+      <form id="sign-up-form" novalidate>
+        <div class="input-div">
+          <input type="email" id="email" name="email" placeholder="Email address" />
+          <input type="text" id="username" name="username" placeholder="Username" />
+          <input type="password" id="password" name="password" placeholder="Password" />
+          <i class="fa-solid fa-eye"></i>
+          <i class="fa-solid fa-eye-slash"></i>
+        </div>
+        <p>
+          Already have an account,
+          <a class="signin-link" href="./sign-in.html">click here!</a>
+        </p>
+        <button type="submit" class="btn" id="btn-sign-up">Sign up</button>
+      </form>
+      <!-- end form -->
+      <p class="sign-up-footer">&copy; 2025 - Rikkei Education</p>
+    </main>
+
+    <!-- MSG -->
+    <div id="msg">
+      <div id="sign-up-validation" class="hidden">
+        <div class="sign-up-validation-header">
+          <i class="fa-solid fa-circle-minus"></i>
+          <p>Please fix the following</p>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <div class="sign-up-validation-content" data-content></div>
+      </div>
+      <div id="sign-up-toast" class="hidden"><i class="fa-solid fa-circle-check"></i><span class="toast-title" data-content></span></div>
+      <div id="sign-up-error" class="hidden"><div><i class="fa-solid fa-circle-exclamation"></i><span data-content></span></div></div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/sign-up.js"></script>
+  </body>
+</html>
