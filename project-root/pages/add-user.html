@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Add new user</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+<link rel="stylesheet" href="../css/reset.css" /><link rel="stylesheet" href="../css/add-user.css" /><link rel="icon" type="image/png" href="../assets/images/trello-favicon.png" /></head>
+<body>
+<header id="header"><div class="dashboard-logo"><img src="../assets/images/dashboard-logo.png" alt="Trello" /></div><div class="dashboard-header-empty"></div></header>
+<div id="body-container">
+    <nav id="side-container">
+      <p class="side-container-title">Your dashboard</p>
+      <div class="dashboard-list"><img src="../assets/icons/user-dashboard-icon.png" alt="" /><a href="./dashboard.html">User management</a></div>
+      <div class="dashboard-list"><img src="../assets/icons/add-new-user-icon.png" alt="" /><a href="./add-user.html">Add user</a></div>
+      <div class="dashboard-list sign-out"><img src="../assets/icons/sign-out-icon.png" alt="" /><a id="sign-out">Sign out</a></div>
+    </nav>
+    <main id="main">
+      <div class="main-title-div"><i class="fa-solid fa-bars"></i><h2>User management</h2></div>
+      <h3 class="page-title">Add new user</h3>
+      <form id="add-new-user-form" novalidate>
+        <div class="form-row-two-cols">
+          <div class="input-element"><label for="fullname">Full name</label><input id="fullname" type="text" /></div>
+          <div class="input-element"><label for="email">Email</label><input id="email" type="email" /></div>
+        </div>
+        <div class="form-row-two-cols">
+          <div class="input-element"><label for="username">Username</label><input id="username" type="text" /></div>
+          <div class="input-element password-input"><label for="password">Password</label><input id="password" type="password" /><i class="fa-solid fa-eye"></i><i class="fa-solid fa-eye-slash"></i></div>
+        </div>
+        <div class="form-row-three-cols">
+          <div class="input-element"><label for="usercode">User code</label><input id="usercode" type="text" readonly /></div>
+          <div class="input-element"><label for="role">Role</label><select id="role"><option value="user">User</option><option value="admin">Admin</option></select></div>
+          <div class="input-element"><label for="birthday">Birthday</label><input id="birthday" type="date" /></div>
+        </div>
+        <div class="form-row-three-cols">
+          <div class="input-element"><label>Status</label>
+            <div class="status-option">
+              <input type="radio" name="status" id="st-active" value="Active" checked /><label class="status-label" for="st-active">Active</label>
+              <input type="radio" name="status" id="st-deactive" value="Deactive" /><label class="status-label" for="st-deactive">Deactive</label>
+            </div>
+          </div>
+        </div>
+        <div class="description"><label for="description">Description</label><textarea id="description" class="description-text-input"></textarea></div>
+        <div class="btn-row"><button type="button" class="form-btn" id="back-btn">Back</button><button type="submit" class="form-btn add-btn">Add user</button></div>
+      </form>
+    </main>
+</div>
+<div id="msg">
+  <div id="add-toast" class="hidden"><i class="fa-solid fa-circle-check"></i><span class="toast-title" data-content></span></div>
+  <div id="add-error" class="hidden"></div>
+</div>
+<script src="../js/common.js"></script><script src="../js/add-user.js"></script>
+</body></html>
